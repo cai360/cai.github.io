@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Record</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+        <link href="./style.css" rel="stylesheet" />
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Retrieve values from localStorage
+                let SQ_Error = localStorage.getItem('SQ_Error') || []; // Use JSON.parse for arrays
+                let SQ_correct = localStorage.getItem('SQ_correct') || 0;
+                let MC_correct_count = localStorage.getItem('MC_correct_count') || 0;
+                let SC_list = localStorage.getItem('scList') || 0;
+                let MC_incorrect_count = localStorage.getItem('MC_incorrect_count') || 0;
+                let DG_timeSpend = localStorage.getItem('DG_timeSpend') || "0:00";
+                let userName = localStorage.getItem('username') || "guest";
+        
+                // Get elements by ID
+                let SingleQuestionCorrectCount = document.getElementById('SQC');
+                let SingleQuestionError = document.getElementById('SQE');
+                let SingleQuestionList = document.getElementById('SCL')
+                let MutipleQuestionCorrectCount = document.getElementById('MQC');
+                let MutipleQuestionIncorrect = document.querySelector('#MQE');
+                let DirectionGameTimeSpend = document.querySelector('#DGT');
+                let name = document.querySelector('#name');
+        
+                // Update the DOM with retrieved values
+                SingleQuestionCorrectCount.innerHTML = + SQ_correct;
+                SingleQuestionError.innerHTML =SQ_Error; // Join array into string for display
+                SingleQuestionList.innerHTML = SC_list;
+                MutipleQuestionCorrectCount.innerHTML =MC_correct_count;
+                MutipleQuestionIncorrect.innerHTML =  MC_incorrect_count;
+                DirectionGameTimeSpend.innerHTML = DG_timeSpend 
+                name.innerHTML = userName;
+            });
+        </script>
+        
+    </head>
+    <body style="background-color: #bdbdbd;">
+        <div id = record>
+            <div id="title"><p>Name: <span id="name"></span></p></div>
+            <div id="content">
+                
+                <h3>Single Choice</h3>
+                <li>Correct: <span id="SQC"> </span></li>
+                <li>Incorrect: <span id="SQE"> </span></li>
+                <p id="SCL" style="font-size: 1.5rem;"></p>
+                <h3>Mutiple Choice</h3>
+                <li>Correct: <span id="MQC"></span></li>
+                <li>Incorrect<span id="MQE"></span></li>
+                <h3>Direction Game</h3>
+                <li>Time Spend: <span id="DGT"></span>sec</li>
+            </div>
+            <button onclick="window.location.href = './index.html'">back to main page</button>
+        </div>
+        
+    </body>
+</html>

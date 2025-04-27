@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Main Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./script.js" defer></script> 
+
+</head>
+
+
+<body>
+
+    <header>
+        <div>
+            <h1>請問火車站怎麼走？</h1>
+            <h1 style="font-size:1.4rem;">Qǐngwèn huǒchē zhàn zěnme zǒu?</h1>
+            
+        </div>   
+    </header>
+    <nav>
+        <div id="menu-toggle">☰</div>
+        <div id="internal_link">
+            <a href="#part1">Vocabulary</a>
+            <a href="#askdirection">Sentences</a>
+            <a href="#SingleChoice">SingleChoice</a>
+            <a href="#MutipleChoice">MutipleChoice</a>
+            <a href="#DirectionGame">DirectionGame</a>
+            <button onclick="window.location.href = './record.html'">record</button>
+        </div>
+        <p id="userName"></p>
+    </nav>
+    
+    
+    <div class="container">
+
+        <!-- vocabluary public transportation-->
+        <div class="section" id="introduction">
+            <h2>Introduction</h2>
+            <hr>
+            <div class="introduction">
+                <div class="transportation">
+                    <div id="transport_p">
+                        <!-- Image will be dynamically added here -->
+                    </div>
+                    <div id="transport_mes">
+                        <!-- Image will be dynamically added here -->
+                        <p id="tr_pinyin" ></p>
+                        <p id="tr_madarin"></p>
+                        <p id="tr_en" ></p>
+                    </div>
+                </div>
+                <div class="transportation_btms" >
+                    <button id="backBtnPic">Back</button>
+                    <button id="nextBtnPic">Next</button>
+                    <button id="soundBtnPic">Sound🔊</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="article">
+            <h2>Conversation</h2>
+            <hr>
+            <div class="conversation">
+                <div class="tobeflex">
+                    <button id="cs1">🔊</button>
+                    <p class="conversation1" data-tooltip="May I ask, how to go to the train station?">小明：請問火車站怎麼走？</p>
+                </div>
+
+                <div class="tobeflex">
+                    <button id="cs2">🔊</button>
+                    <p class="conversation1" data-tooltip="You go straight ahead, turn left at the second traffic light, it’s on the left.">路人：你往前直走，到第二個紅綠燈左轉，火車站就在左邊。</p>  
+                </div>
+
+                <div class="tobeflex">
+                    <button id="cs3">🔊</button>
+                    <p class="conversation1" data-tooltip="How to go to the High-Speed Rail station?">小明：謝謝！那高鐵站怎麼去？</p>
+                </div>
+
+                <div class="tobeflex">
+                    <button id="cs4">🔊</button>
+                    <p class="conversation1" data-tooltip="The High-Speed Rail station is farther away. You can take the MRT to get there.">路人：高鐵站比較遠，你可以搭捷運到那邊。</p>
+                </div>
+
+                <div class="tobeflex">
+                    <button id="cs5">🔊</button>
+                    <p class="conversation1" data-tooltip="Okay, got it, thank you!">小明：好的，我知道了，謝謝您！</p>
+                </div>
+
+                <div class="tobeflex">
+                    <button id="cs6">🔊</button>
+                    <p class="conversation1" data-tooltip="You’re welcome!">路人：不客氣！</p>
+                </div>
+            </div>
+               
+            </div>
+        </div>
+
+
+        <!--  how to ask the direction -->
+        <div class="section" id="askdirection">
+            <h2>Sentence</h2>
+            <hr>
+            <div class="sentences">
+                <div>
+                    <p>Q:</p>
+                </div>
+                <div>
+                    <p>請問</p>
+                    <p>Qǐngwèn</p>
+                </div>
+                <div>
+                    <p><select id="sentences_S1">
+                        <option value="" selected>Select a station</option>
+                        <option value="huǒ chē zhàn">火車站</option>
+                        <option value="jié yùn zhàn">捷運站</option>
+                        <option value="gōng chē zhàn">公車站</option>
+                        <option value="gāo tiě zhàn">高鐵站</option> 
+                    </select></p>
+                    <p class="sentences_Pinyin"></p>
+                </div>
+                <div>
+                    <p>怎麼</p>
+                    <p>zěnme</p>
+                </div>
+                <div>
+                    <p>走？</p>
+                    <p>zǒu?</p>
+                </div>
+                                
+            </div>
+            <div class="sentences">
+                <div>
+                    <p>A:</p>
+                </div>
+                <div>
+                    <p>直</p>
+                    <p>zhí</p>
+                </div>
+                <div>
+                    <p>走</p>
+                    <p>zǒu</p>
+                </div>
+                <div>
+                    <p>後</p>
+                    <p>hòu</p>
+                </div>
+                <div>
+                    <p>右</p>
+                    <p>yìu </p>
+                </div>
+                <div>
+                    <p>轉</p>
+                    <p>zhuǎn</p>
+                </div>
+                <div>
+                    <p>再</p>
+                    <p>zài</p>
+                </div>
+                <div>
+                    <p>左</p>
+                    <p>zuǒ</p>
+                </div>
+                <div>
+                    <p>轉</p>
+                    <p>zhuǎn</p>
+                </div>
+                <div>
+                    <p>，</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p id="sentences_S2">(place)</p>
+                    <p class="sentences_Pinyin">place</p>
+                </div>
+                <div>
+                    <p>就</p>
+                    <p>jiù</p>
+                </div>
+                <div>
+                    <p>在</p>
+                    <p>zài</p>
+                </div>
+                <div>
+                    <p>左邊</p>
+                    <p>zuǒbiān</p>
+                </div>
+                                
+            </div>
+        </div>
+
+        <!-- Single Choice -->
+        <div class="section" id="SingleChoice">
+            <h2>Single Choice</h2>
+            <hr>
+            <div class="single_question">
+                <p id="sc_question">
+                    <!-- question will be dynamically added here -->
+                     click Raccoon whenever you are ready!
+                </p>
+                <p id="SQtimer"></p>
+                <div id="scPrepare">
+                    <img src="https://c.pxhere.com/photos/66/b8/raccoon_varmint_mammal_masked_wildlife_cute_nature_wild-1047331.jpg!d" srcset="https://c.pxhere.com/photos/66/b8/raccoon_varmint_mammal_masked_wildlife_cute_nature_wild-1047331.jpg!d" alt="nature, black and white, animal, cute, looking, wildlife, wild, fur, young, mammal, black, fauna, outdoors, face, nose, whiskers, raccoon, snout, furry, vertebrate, bandit, adorable, carnivore, nocturnal, curious, coon, masked, procyon, procyonidae, viverridae, varmint, Free Images In PxHere" id="raccoonPic">
+                    <div class = "options" id="scOption">
+                        <input type="radio" name="q1" id="SQ0" value="0"><label for="SQ0" id="sc0"></label><br>                    
+                        <input type="radio" name="q1" id="SQ1" value="1"><label for="SQ1" id="sc1"></label><br>                   
+                        <input type="radio" name="q1" id="SQ2" value="2"><label for="SQ2" id="sc2"></label><br>                    
+                        <input type="radio" name="q1" id="SQ3" value="3"><label for="SQ3" id="sc3"></label><br> 
+                        
+                    </div>
+                    <button id="nextBtnSQ" disabled="true">Next</button>
+                    <button id="finishBtnSQ" disabled="true">Finish</button>
+                    <button id="submitBtnSQ" disabled="true">Submit</button>
+                </div>
+                <div id="SQFeedback"></div>
+            </div>
+                
+        </div>
+
+        <!--  Mutiple Choice -->
+        <div class="section" id="MutipleChoice">
+            <h2>Mutiple Choice</h2>
+            <hr>
+            <p>Select the locations that were passed through </p>
+            <p id="mutiple_question">click start after ready</p>
+            <button id="MCStartbtn">start</button>
+            <div class="tobeflex">
+                <div class="map">
+                    <table id="Map2">
+                        <tr id="map_tr0">
+                            <td id="map00"> </td> <td id="map01"> </td> <td id="map02" class="road"> </td> <td id="map03"> </td> <td id="map04"> </td> <td id="map05" class="road"> </td> <td id="map06"> </td> <td id="map07"> </td>
+                        </tr>
+                        <tr id="map_tr1">
+                            <td id="map10"> </td> <td id="map11"> </td> <td id="map12" class="road"> </td> <td id="map13"> </td> <td id="map14"> </td> <td id="map15" class="road"> </td> <td id="map16"> </td> <td id="map17"> </td>
+                        </tr>
+                        <tr id="map_tr2">
+                            <td id="map20" class="road"> </td> <td id="map21" class="road"> </td> <td id="map22" class="road"> </td> <td id="map23" class="road"> </td> <td id="map24" class="road"> </td> <td id="map25" class="road"> </td> <td id="map26" class="road"> </td> <td id="map27" class="road"> </td>
+                        </tr>
+                        <tr id="map_tr3">
+                            <td id="map30"> </td> <td id="map31"> </td> <td id="map32" class="road"> </td> <td id="map33"> </td> <td id="map34"> </td> <td id="map35" class="road"> </td> <td id="map36"> </td> <td id="map37"> </td>
+                        </tr>
+                        <tr id="map_tr4">
+                            <td id="map40"> </td> <td id="map41"> </td> <td id="map42" class="road"> </td> <td id="map43"> </td> <td id="map44"> </td> <td id="map45" class="road"> </td> <td id="map46"> </td> <td id="map47"> </td>
+                        </tr>
+                        <tr id="map_tr5">
+                            <td id="map50" class="road"> </td> <td id="map51" class="road"> </td> <td id="map52" class="road"> </td> <td id="map53" class="road"> </td> <td id="map54" class="road"> </td> <td id="map55" class="road"> </td> <td id="map56" class="road"> </td> <td id="map57" class="road"> </td>
+                        </tr>
+                        <tr id="map_tr6">
+                            <td id="map60"></td> <td id="map61"> </td> <td id="map62" class="road"> </td> <td id="map63"> </td> <td id="map64"> </td> <td id="map65" class="road"> </td> <td id="map66"> </td> <td id="map67"> </td>
+                        </tr>
+                        <tr id="map_tr7">
+                            <td id="map70"> </td> <td id="map71"> </td> <td id="map72" class="road"> </td> <td id="map73" class="road"> </td> <td id="map74" class="road"> </td> <td id="map75" class="road"></td> <td id="map76"> </td> <td id="map77"> </td>
+                        </tr>
+                    </table>
+                    
+                </div>    
+                <div class="options" id="mcOptions">
+                    <input type="checkbox" id="MC0" name="mcQ" value="0">
+                    <label for="MC0" id="mc0"> 腳踏車</label><br>
+                    <input type="checkbox" id="MC1" name="mcQ" value="1">
+                    <label for="MC1" id="mc1"> 公車站</label><br>
+                    <input type="checkbox" id="MC2" name="mcQ" value="2">
+                    <label for="MC2" id="mc2"> 捷運站</label><br>
+                    <input type="checkbox" id="MC3" name="mcQ" value="3">
+                    <label for="MC3" id="mc3"> 火車站</label><br>
+                    <input type="checkbox" id="MC4" name="mcQ" value="4">
+                    <label for="MC4" id="mc4"> 高鐵站</label><br>
+                </div>               
+                          
+            </div>
+            <div id="mcButtons">
+                <button id="mcCheck" disabled="true">check</button>
+                <button id="MCNextbtn" disabled="true">Next</button>            
+                <button id="MCPathbtn" disabled="true">Hint</button>
+                <button id="MCSubmitbtn" disabled="true">Submit</button>
+            </div>
+            <p id="mcFeedback"></p>
+            <div>
+                <!--  hint inside -->
+            </div>
+
+        </div>
+
+        <!-- direction game -->
+        <div class="section" id="DirectionGame">
+            <h2>Direction game</h2>
+            <hr>
+            <p>put the correct building on the correct position</p>
+            <div class="tobeflex">
+                <button id="DGStartBtn">Start</button>
+                <button id="DGsoundBtn" style="display: none;">listen again</button>
+                <p id="DGtime"></p>
+            </div>
+            <div class="tobeflex">
+                <div class="map">
+                    <table id="directionMap">
+                        <tr id="tr0">
+                            <td id="td00"> </td> <td id="td01"> </td> <td id="td02"> </td> <td id="td03"> </td> <td id="td04"> </td> <td id="td05"> </td> <td id="td06"> </td> <td id="td07"> </td>
+                        </tr>
+                        <tr id="tr1">
+                            <td id="td10"></td> <td id="td11"> <label for="select0">C.</label><select name="location0" id="select0" disabled="true">
+                                <option disabled selected value="">location</option>
+                                <option value="火車站">火車站</option>
+                                <option value="高鐵站">高鐵站</option>
+                                <option value="腳踏車">腳踏車</option>
+                                <option value="公車站">公車站</option>
+                                <option value="捷運站">捷運站</option>
+                </select> </td> <td id="td12"> </td> <td id="td13"> </td> <td id="td14"> </td> <td id="td15"> </td> <td id="td16"> </td> <td id="td17"> </td>
+                        </tr>
+                        <tr id="tr2">
+                            <td id="td20"> </td> <td id="td21"> </td> <td id="td22"> </td> <td id="td23"> </td> <td id="td24"> </td> <td id="td25"> </td> <td id="td26"> </td> <td id="td27"> </td>
+                        <tr id="tr3"> 
+                            <td id="td30"> </td> <td id="td31"><label for="select1">B.</label> <select name="location1" id="select1" disabled="true">
+                                <option disabled selected value="">location</option>
+                                <option value="火車站">火車站</option>
+                                <option value="高鐵站">高鐵站</option>
+                                <option value="腳踏車">腳踏車</option>
+                                <option value="公車站">公車站</option>
+                                <option value="捷運站">捷運站</option>
+                </select></td> <td id="td32"> </td> <td id="td33"> </td> <td id="td34"><label for="select2">D.</label> <select name="location2" id="select2" disabled="true">
+                    <option disabled selected value="">location</option>
+                    <option value="火車站">火車站</option>
+                                <option value="高鐵站">高鐵站</option>
+                                <option value="腳踏車">腳踏車</option>
+                                <option value="公車站">公車站</option>
+                                <option value="捷運站">捷運站</option>
+                </select></td> <td id="td35"> </td> <td id="td36"><label for="select3">E.</label><select name="location3" id="select3" disabled="true">
+                    <option disabled selected value="">location</option>
+                    <option value="火車站">火車站</option>
+                                <option value="高鐵站">高鐵站</option>
+                                <option value="腳踏車">腳踏車</option>
+                                <option value="公車站">公車站</option>
+                                <option value="捷運站">捷運站</option>
+                </select></td> <td id="td37"> </td>
+                        <tr id="tr4">
+                            <td id="td40"> </td> <td id="td41"> </td> <td id="td42"> </td> <td id="td43"><label for="select4">A.</label> <select name="location4" id="select4" disabled="true">
+                                <option disabled selected value="" >location</option>
+                                <option value="火車站">火車站</option>
+                                <option value="高鐵站">高鐵站</option>
+                                <option value="腳踏車">腳踏車</option>
+                                <option value="公車站">公車站</option>
+                                <option value="捷運站">捷運站</option>
+                    </select></td> <td id="td44"> </td> <td id="td45"> </td> <td id="td46"> </td>  <td id="td47"> </td>
+                        <tr id="tr5">
+                            <td id="td50"> </td> <td id="td51"> </td> <td id="td52"> </td> <td id="td53"> </td> <td id="td54"> </td> <td id="td55"> </td> <td id="td56"> </td>  <td id="td57"> </td>
+                        </tr>
+                        <td id="td60"> </td> <td id="td61"> </td> <td id="td62"> </td> <td id="td63"> </td> <td id="td64"> </td> <td id="td65"> </td> <td id="td66"> </td>  <td id="td67"> </td>
+                        </tr>
+                        <tr id="tr7">
+                            <td id="td70"> </td> <td id="td71"> </td> <td id="td72"> </td> <td id="td73"> </td> <td id="td74"> </td> <td id="td75" style="text-align: center;">start</td> <td id="td76"> </td>  <td id="td77"> </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="hint">
+                    <p id="hint0"></p>
+                    <p id="hint1"></p>
+                    <p id="hint2"></p>
+                    <p id="hint3"></p>
+                    <p id="hint4"></p>
+                </div>
+            </div>
+            <p id="DGfeedback"></p>
+            <button id="DGcheckBtn" disabled="true">check</button>
+            <button id="DGsubmitBtn" disabled="true">Submit</button>
+            <button id="conditionalBtn" style="display: none;">Want some hints?</button>
+            <button id="DGsimulateBtn">simulate</button> 
+        </div>
+
+        
+
+    </div>
+    <footer></footer>
+</body>
+</html>
