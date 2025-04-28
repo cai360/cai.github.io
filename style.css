@@ -114,11 +114,8 @@ nav {
     padding-right: 15px;
 }
 
-
-
 .section {
     padding: 2rem 5%;
-    /* padding: 0.5rem 2rem 1rem 2rem; */
 }
 
 .section:hover {
@@ -130,14 +127,14 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     margin-left: 5%;
     font-size: 1.7rem;
+    text-align: center;
 }
 
 p {
-    margin-left: 5%;
     font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
 }
-
-
 
 hr {
     width: 90%;
@@ -147,8 +144,7 @@ hr {
     margin: 1rem auto;
 }
 
-.introduction{ 
-    /* background-color: rgb(193, 193, 181); */
+.introduction { 
     position: relative; 
     padding-top: 50px;
     padding-bottom: 50px;
@@ -157,51 +153,98 @@ hr {
     align-items: center;
 }
 
+.transportation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
-.transportation{
-    /* background-color: orange; */
+#transport_p {  
+    flex: 0 0 auto;
+    padding: 0 15px;
+}
+
+.transportation img { 
+    width: 300px;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+
+#transport_mes {
+    flex: 0 0 auto;
+    padding: 0 20px;
+}
+
+#transport_mes p {
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+
+.transportation_btms {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;   
+    margin-top: 1rem;
+    flex-wrap: wrap; 
+    gap: 10px;
 }
 
-#transport_p{  
-    min-width: 300px; 
-    padding-left: 15%;
+.transportation_btms button {
+    flex: 0 0 auto;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.transportation img{ 
-    width: 100%;
-    display: block;
-    border-radius: 40px;  
+.transportation_btms button:hover {
+    background-color: #45a049;
 }
 
-#transport_mes{
-    /* background-color: rgb(84, 132, 199); */  
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-right: 30%; 
-    padding-left: 50px;
-    height: 30%;
-    
-    
+@media (max-width: 992px) {
+    .transportation {
+        flex-wrap: wrap;
+    }
+
+    #transport_p, #transport_mes {
+        text-align: center;
+    }
 }
 
+@media (max-width: 576px) {
+    .transportation {
+        overflow-x: auto; 
+    }
 
-#transport_mes p{
-    white-space: nowrap;
-    font-size:2rem;
-    text-align: center;
+    .transportation_btms {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .transportation_btms button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    #transport_mes p {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }
 
-.transportation_btms{
-    display: flex;
-    width: 50%;
-    align-items: center;
-    margin-top: 0.5rem;
-    justify-content: space-around;
-}
 
 .conversation {
     position: relative;
