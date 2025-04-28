@@ -200,21 +200,28 @@
                     <!-- question will be dynamically added here -->
                      click Raccoon whenever you are ready!
                 </p>
-                <p id="SQtimer"></p>
-                <div id="scPrepare">
-                    <img src="https://c.pxhere.com/photos/66/b8/raccoon_varmint_mammal_masked_wildlife_cute_nature_wild-1047331.jpg!d" srcset="https://c.pxhere.com/photos/66/b8/raccoon_varmint_mammal_masked_wildlife_cute_nature_wild-1047331.jpg!d" alt="nature, black and white, animal, cute, looking, wildlife, wild, fur, young, mammal, black, fauna, outdoors, face, nose, whiskers, raccoon, snout, furry, vertebrate, bandit, adorable, carnivore, nocturnal, curious, coon, masked, procyon, procyonidae, viverridae, varmint, Free Images In PxHere" id="raccoonPic">
-                    <div class = "options" id="scOption">
-                        <input type="radio" name="q1" id="SQ0" value="0"><label for="SQ0" id="sc0"></label><br>                    
-                        <input type="radio" name="q1" id="SQ1" value="1"><label for="SQ1" id="sc1"></label><br>                   
-                        <input type="radio" name="q1" id="SQ2" value="2"><label for="SQ2" id="sc2"></label><br>                    
-                        <input type="radio" name="q1" id="SQ3" value="3"><label for="SQ3" id="sc3"></label><br> 
-                        
-                    </div>
+                <div class="mcButtons">
                     <button id="nextBtnSQ" disabled="true">Next</button>
                     <button id="finishBtnSQ" disabled="true">Finish</button>
                     <button id="submitBtnSQ" disabled="true">Submit</button>
+                    <p id="SQtimer"></p>
                 </div>
-                <div id="SQFeedback"></div>
+                <div id="scPrepare">
+                    <div class="tobeflex">
+                        <img src="https://c.pxhere.com/photos/66/b8/raccoon_varmint_mammal_masked_wildlife_cute_nature_wild-1047331.jpg!d" srcset="https://c.pxhere.com/photos/66/b8/raccoon_varmint_mammal_masked_wildlife_cute_nature_wild-1047331.jpg!d" alt="nature, black and white, animal, cute, looking, wildlife, wild, fur, young, mammal, black, fauna, outdoors, face, nose, whiskers, raccoon, snout, furry, vertebrate, bandit, adorable, carnivore, nocturnal, curious, coon, masked, procyon, procyonidae, viverridae, varmint, Free Images In PxHere" id="raccoonPic">
+                        <div class = "options" id="scOption">
+                            <input type="radio" name="q1" id="SQ0" value="0"><label for="SQ0" id="sc0"></label><br>                    
+                            <input type="radio" name="q1" id="SQ1" value="1"><label for="SQ1" id="sc1"></label><br>                   
+                            <input type="radio" name="q1" id="SQ2" value="2"><label for="SQ2" id="sc2"></label><br>                    
+                            <input type="radio" name="q1" id="SQ3" value="3"><label for="SQ3" id="sc3"></label><br> 
+                            
+                        </div>
+                        
+                    </div>
+                    <div id="SQFeedback"></div>
+
+                </div>
+                
             </div>
                 
         </div>
@@ -225,7 +232,13 @@
             <hr>
             <p>Select the locations that were passed through </p>
             <p id="mutiple_question">click start after ready</p>
-            <button id="MCStartbtn">start</button>
+            <div class="tobeflex" class="mcButtons">
+                <button id="MCStartbtn">start</button>
+                <button id="mcCheck" disabled="true">check</button>
+                <button id="MCNextbtn" disabled="true">Next</button>            
+                <button id="MCPathbtn" disabled="true">Hint</button>
+                <button id="MCSubmitbtn" disabled="true">Submit</button>
+         </div>
             <div class="tobeflex">
                 <div class="map">
                     <table id="Map2">
@@ -270,12 +283,7 @@
                 </div>               
                           
             </div>
-            <div id="mcButtons">
-                <button id="mcCheck" disabled="true">check</button>
-                <button id="MCNextbtn" disabled="true">Next</button>            
-                <button id="MCPathbtn" disabled="true">Hint</button>
-                <button id="MCSubmitbtn" disabled="true">Submit</button>
-            </div>
+
             <p id="mcFeedback"></p>
             <div>
                 <!--  hint inside -->
@@ -288,7 +296,7 @@
             <h2>Direction game</h2>
             <hr>
             <p>put the correct building on the correct position</p>
-            <div class="tobeflex">
+            <div class="tobeflex" class="mcButtons">
                 <button id="DGStartBtn">Start</button>
                 <button id="DGsoundBtn" style="display: none;">listen again</button>
                 <button id="DGcheckBtn" disabled="true">check</button>

@@ -336,7 +336,10 @@ button{
 }
 
 #SQFeedback{
+    display: flex;
+    justify-content: center; 
     margin-left: 5%;
+    margin-top: 1rem;
     font-size: 1.2rem;
 }
 
@@ -428,15 +431,15 @@ input[type="checkbox"]{
 }
 
 #mcOptions{
+    margin-top: -2rem;
     margin-left: 8%;
     align-items: flex-start;
 }
 
-#mcButtons {
+.mcButtons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: -3rem;
+    flex-wrap: nowrap;
     gap: 1rem;
 }
 
